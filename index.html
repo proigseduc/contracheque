@@ -1,37 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Consulta de Contracheque</title>
-    <script>
-        function consultarContracheque() {
-            // Obtém o valor digitado no campo de matrícula
-            var matricula = document.getElementById('matricula').value;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout do Menu - Sistema de Controle da Qualidade da Água</title>
+  <style>
+    /* Estilo Geral */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-            // Aqui você pode implementar a lógica para consultar o contracheque no backend ou em um banco de dados
+    /* Cabeçalho */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-            // Exemplo de resposta
-            var resposta = {
-                nome: 'Fulano de Tal',
-                salario: 5000,
-                beneficios: ['Vale Alimentação', 'Plano de Saúde']
-            };
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
 
-            // Exibe os resultados na página
-            document.getElementById('nome').textContent = resposta.nome;
-            document.getElementById('salario').textContent = 'R$ ' + resposta.salario.toFixed(2);
-            document.getElementById('beneficios').textContent = resposta.beneficios.join(', ');
-        }
-    </script>
+    /* Barra de Navegação Superior */
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #ffffff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 0.9rem;
+    }
+
+    /* Área Principal */
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 15px;
+      width: 30%;
+      min-width: 250px;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    .section button {
+      display: flex;
+      align-items: center;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .section button:hover {
+      background-color: #45a049;
+    }
+
+    .section button span {
+      margin-left: 10px;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Consulta de Contracheque</h1>
-    <label for="matricula">Matrícula:</label>
-    <input type="text" id="matricula">
-    <button onclick="consultarContracheque()">Consultar</button>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>SISTEMA DE CONTROLE DA QUALIDADE DA ÁGUA</h1>
+  </header>
 
-    <h2>Resultado:</h2>
-    <p>Nome: <span id="nome"></span></p>
-    <p>Salário: <span id="salario"></span></p>
-    <p>Benefícios: <span id="beneficios"></span></p>
+  <!-- Barra de Navegação Superior -->
+  <div class="navbar">
+    <a href="#">Relatórios</a>
+    <a href="#">Configurações</a>
+    <a href="#">Ajuda</a>
+  </div>
+
+  <!-- Área Principal -->
+  <div class="main-content">
+    <!-- Seção Análises -->
+    <div class="section">
+      <h2>Análises</h2>
+      <button><span>📝</span>Cadastrar Análise</button>
+      <button><span>🔍</span>Visualizar Análises</button>
+      <button><span>📊</span>Relatório de Análises</button>
+    </div>
+
+    <!-- Seção Operações -->
+    <div class="section">
+      <h2>Operações</h2>
+      <button><span>⏳</span>Horas Operadas - Totalizador</button>
+      <button><span>⏳</span>Horas Operadas - Pilar</button>
+      <button><span>⏳</span>Horas Operadas - Uaua</button>
+    </div>
+
+    <!-- Seção Relatórios -->
+    <div class="section">
+      <h2>Relatórios</h2>
+      <button><span>📄</span>Consultar Leituras</button>
+      <button><span>📥</span>Exportar PDF</button>
+      <button><span>📋</span>Relatórios Detalhados</button>
+    </div>
+
+    <!-- Seção Configurações -->
+    <div class="section">
+      <h2>Configurações</h2>
+      <button><span>👤</span>Cadastrar Usuário</button>
+      <button><span>📦</span>Controle de Estoque</button>
+      <button><span>⚙️</span>Parâmetros do Sistema</button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2023 Sistema de Controle da Qualidade da Água | Versão 1.0</p>
+  </footer>
 </body>
 </html>
